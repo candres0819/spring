@@ -12,6 +12,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+<<<<<<< HEAD
 	<classpathentry combineaccessrules="false" kind="src" path="/ProjectBaseCORE"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/ProjectBaseDAO"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
@@ -32,5 +33,9 @@
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-tx-4.1.1.RELEASE.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-web-4.1.1.RELEASE.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/spring-webmvc-4.1.1.RELEASE.jar"/>
+=======
+	<classpathentry combineaccessrules="false" kind="src" path="/ProjectBaseCORE"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ProjectBaseDAO"/>
+>>>>>>> b2248346b43e74d07479b4d1ec6e8067e7f45edd
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

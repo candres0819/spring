@@ -11,11 +11,20 @@
 		<attributes>
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
+<<<<<<< HEAD
 	</classpathentry>
 	<classpathentry combineaccessrules="false" kind="src" path="/ProjectBaseDAO"/>
 	<classpathentry kind="lib" path="/ProjectBaseWEB/WebContent/WEB-INF/lib/spring-beans-4.1.1.RELEASE.jar"/>
 	<classpathentry kind="lib" path="/ProjectBaseWEB/WebContent/WEB-INF/lib/spring-context-4.1.1.RELEASE.jar"/>
 	<classpathentry kind="lib" path="/ProjectBaseWEB/WebContent/WEB-INF/lib/spring-core-4.1.1.RELEASE.jar"/>
 	<classpathentry kind="lib" path="/ProjectBaseWEB/WebContent/WEB-INF/lib/spring-expression-4.1.1.RELEASE.jar"/>
+=======
+	</classpathentry>
+	<classpathentry kind="lib" path="/ProjectBaseWEB/WebContent/WEB-INF/lib/spring-beans-3.2.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/ProjectBaseWEB/WebContent/WEB-INF/lib/spring-context-3.2.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/ProjectBaseWEB/WebContent/WEB-INF/lib/spring-core-3.2.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/ProjectBaseWEB/WebContent/WEB-INF/lib/spring-expression-3.2.3.RELEASE.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/ProjectBaseDAO"/>
+>>>>>>> b2248346b43e74d07479b4d1ec6e8067e7f45edd
 	<classpathentry kind="output" path="bin"/>
 </classpath>
