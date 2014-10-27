@@ -9,7 +9,7 @@
 </head>
 <body>
 	<section>
-		<form action="menu" method="post">
+		<form action="login" method="post">
 			<div>
 				<div>Nombre:</div>
 				<div><input type="text" id="nombre" name="nombre" /></div>
