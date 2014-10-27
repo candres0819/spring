@@ -2,6 +2,8 @@ package com.projectbase.web.controller;
 
 import java.util.Locale;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,8 +32,13 @@ public class InicioController {
 	}
 
 	@RequestMapping(value = "/menu", method = RequestMethod.POST)
-	public String onSubmit(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
-		return "menu";
+	public String onSubmit(HttpServletRequest request, Model model) throws Exception {
+		logger.info("Menu");
+		try {
+			inicioHelper.validarUsuario(request, model);
+			return "menu";
+		} catch (Exception e) {
+			throw e;
+		}
 	}
 }

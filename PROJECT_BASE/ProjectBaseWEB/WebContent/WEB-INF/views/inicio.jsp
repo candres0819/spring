@@ -9,10 +9,10 @@
 </head>
 <body>
 	<section>
-		<form action="login" method="post">
+		<form action="menu" method="post">
 			<div>
-				<div>Nombre:</div>
-				<div><input type="text" id="nombre" name="nombre" /></div>
+				<div>Login:</div>
+				<div><input type="text" id="login" name="login" /></div>
 			</div>
 			<div>
 				<div>Contraseña:</div>
@@ -24,6 +24,6 @@
 		</form>
 	</section>
 </body>
-<script type="text/javascript" src="<c:url value='/js/jquery-1.11.1.min.js'/>"></script>
-<script type="text/javascript" src="<c:url value='/js/scripts.js'/>"></script>
+<script type="text/javascript" src="<c:url value='/resources/js/jquery-1.11.1.min.js'/>"></script>
+<script type="text/javascript" src="<c:url value='/resources/js/scripts.js'/>"></script>
 </html>
