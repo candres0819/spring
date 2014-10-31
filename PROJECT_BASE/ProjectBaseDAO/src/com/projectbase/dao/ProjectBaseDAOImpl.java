@@ -22,7 +22,6 @@ import com.projectbase.dao.model.Equipo;
 import com.projectbase.dao.model.FinPYG;
 import com.projectbase.dao.model.Informacion;
 import com.projectbase.dao.model.LlamadoPYG;
-import com.projectbase.dao.model.PermisosUsuario;
 import com.projectbase.dao.model.UltimoPYG;
 import com.projectbase.dao.model.UsuarioSesion;
 import com.projectbase.dao.rowmapper.AdmonCentrosCostosRMI;
@@ -50,16 +49,13 @@ public class ProjectBaseDAOImpl implements ProjectBaseDAO {
 	 * #consultarHoraCierre(java.lang.String)
 	 */
 	public UsuarioSesion consultarUsuario(String login) {
-		this.sqlConsultarUsuario = "select e.id_persona as idUsuario, b.id_rol as idRol, c.id_permiso as idPermiso, e.usuario as login from SEG_PERSONAS_ROLES a"
-				+ "	join SEG_ROLES b on a.ID_ROL = b.ID_ROL join SEG_ROLES_PERMISOS c on b.id_rol = c.id_rol"
-				+ "	join SEG_PERMISOS d on c.id_permiso = d.id_permiso join ADM_PERSONAS_NAT_Y_JUR e on a.id_persona = e.id_persona"
-				+ " where e.usuario = ?;";
+		this.sqlConsultarUsuario = "SELECT ID, NOMBRE, LOGIN FROM usuario WHERE LOGIN = ?";
 
 		final LinkedList<SqlParameter> parametros = new LinkedList<SqlParameter>();
-		parametros.add(new SqlParameter("eusuario", Types.VARCHAR));
+		parametros.add(new SqlParameter("LOGIN", Types.VARCHAR));
 
 		final LinkedHashMap<String, Object> valorParametros = new LinkedHashMap<String, Object>();
-		valorParametros.put("eusuario", login);
+		valorParametros.put("LOGIN", login);
 
 		final MappingSqlQueryServicio mappingSqlQuery = new MappingSqlQueryServicio(this.jdbcTemplate, this.sqlConsultarUsuario,
 				parametros, valorParametros, new UsuarioSesionRMI());
@@ -68,31 +64,6 @@ public class ProjectBaseDAOImpl implements ProjectBaseDAO {
 
 		if (null != resultado && !resultado.isEmpty()) {
 			UsuarioSesion usarioRetorno = (UsuarioSesion) resultado.get(0);
-			List<PermisosUsuario> permisos = new ArrayList<PermisosUsuario>();
-			PermisosUsuario permiso = null;
-			for (Object user : resultado) {
-				UsuarioSesion usuario = (UsuarioSesion) user;
-				permiso = new PermisosUsuario();
-				permiso.setIdPermiso(usuario.getIdPermiso());
-				if (1 == usuario.getIdPermiso()) {
-					permiso.setNombrePermiso("Exportador");
-				} else if (2 == usuario.getIdPermiso()) {
-					permiso.setNombrePermiso("Validaciones");
-				} else if (3 == usuario.getIdPermiso()) {
-					permiso.setNombrePermiso("AplicacionCostos");
-				} else if (4 == usuario.getIdPermiso()) {
-					permiso.setNombrePermiso("BorrarMovimientos");
-				} else if (6 == usuario.getIdPermiso()) {
-					permiso.setNombrePermiso("CentrosCostos");
-				} else if (7 == usuario.getIdPermiso()) {
-					permiso.setNombrePermiso("presupuesto");
-				} else if (5 == usuario.getIdPermiso()) {
-					permiso.setNombrePermiso("PYG");
-				}
-				permisos.add(permiso);
-			}
-			usarioRetorno.setPermisos(permisos);
-			usarioRetorno.setIdPermiso(null);
 			return usarioRetorno;
 		}
 

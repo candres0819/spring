@@ -11,9 +11,9 @@
 
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://quiron:3306/pygs_desarrollo?autoReconnect=true" />
-		<property name="username" value="finanzas" />
-		<property name="password" value="finanzas" />
+		<property name="url" value="jdbc:mysql://localhost:3306/pruebas?autoReconnect=true" />
+		<property name="username" value="candres" />
+		<property name="password" value="candres" />
 <!-- 		<property name="validationQuery" value="SELECT 1" /> -->
 <!-- 		<property name="testOnBorrow" value="true" /> -->
 	</bean>

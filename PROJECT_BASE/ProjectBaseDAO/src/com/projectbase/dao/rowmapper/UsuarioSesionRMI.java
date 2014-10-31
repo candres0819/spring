@@ -11,7 +11,7 @@ import com.projectbase.dao.model.UsuarioSesion;
  * Clase utilizada para realizar el mapeo del resultado de la consulta a base de
  * datos.
  * 
- * @author carlos.cardona [19/12/2013]
+ * @author carlos.cardona
  */
 @SuppressWarnings("rawtypes")
 public class UsuarioSesionRMI implements RowMapper {
@@ -20,13 +20,11 @@ public class UsuarioSesionRMI implements RowMapper {
 
 		final UsuarioSesion usuarioSesion = new UsuarioSesion();
 
-		usuarioSesion.setIdPermiso(result.getInt("idPermiso"));
-		usuarioSesion.setIdRol(result.getInt("idRol"));
-		usuarioSesion.setIdUsuario(result.getInt("idUsuario"));
+		usuarioSesion.setId(result.getInt("id"));
+		usuarioSesion.setNombre((null == result.getString("nombre")) ? "" : result.getString("nombre").trim());
 		usuarioSesion.setLogin((null == result.getString("login")) ? "" : result.getString("login").trim());
 
 		return usuarioSesion;
-
 	}
 
 }

@@ -1,12 +1,11 @@
 package com.projectbase.dao.model;
 
 import java.io.Serializable;
-import java.util.List;
 
 /**
  * 
  * 
- * @author carlos.cardona [19/12/2013]
+ * @author carlos.cardona
  */
 public class UsuarioSesion implements Serializable {
 
@@ -14,34 +13,24 @@ public class UsuarioSesion implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private Integer idUsuario;
-	private List<PermisosUsuario> permisos;
-	private Integer idPermiso;
+	private Integer id;
+	private String nombre;
 	private String login;
-	private Integer idRol;
 
-	public Integer getIdUsuario() {
-		return idUsuario;
+	public Integer getId() {
+		return id;
 	}
 
-	public void setIdUsuario(Integer idUsuario) {
-		this.idUsuario = idUsuario;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
-	public Integer getIdPermiso() {
-		return idPermiso;
+	public String getNombre() {
+		return nombre;
 	}
 
-	public List<PermisosUsuario> getPermisos() {
-		return permisos;
-	}
-
-	public void setPermisos(List<PermisosUsuario> permisos) {
-		this.permisos = permisos;
-	}
-
-	public void setIdPermiso(Integer idPermiso) {
-		this.idPermiso = idPermiso;
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
 	}
 
 	public String getLogin() {
@@ -50,14 +39,6 @@ public class UsuarioSesion implements Serializable {
 
 	public void setLogin(String login) {
 		this.login = login;
-	}
-
-	public Integer getIdRol() {
-		return idRol;
-	}
-
-	public void setIdRol(Integer idRol) {
-		this.idRol = idRol;
 	}
 
 }

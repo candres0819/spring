@@ -5,6 +5,9 @@
         <dependent-module archiveName="ProjectBaseCORE.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ProjectBaseCORE/ProjectBaseCORE">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="ProjectBaseDAO.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ProjectBaseDAO/ProjectBaseDAO">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="ProjectBaseWEB"/>
         <property name="java-output-path" value="/ProjectBaseWEB/build/classes"/>
     </wb-module>
