@@ -8,8 +8,8 @@
 		http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
 	<context:annotation-config />
-	<context:component-scan base-package="com.projectbase" />
+	<context:component-scan base-package="com.carloscardona.projectbase.core" />
 
-	<beans:import resource="classpath:appContext-projectBase-DAO.xml" />
+	<import resource="classpath:spring/appContext-projectBaseDAO-test.xml" />
 
 </beans>

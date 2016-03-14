@@ -27,7 +27,6 @@ public interface ProjectBaseDAO {
 	 * 
 	 * @param login
 	 * @return
-	 * @author carlos.cardona [19/12/2013]
 	 */
 	public UsuarioSesion consultarUsuario(String login);
 
@@ -38,7 +37,6 @@ public interface ProjectBaseDAO {
 	 * @param anyo
 	 * @param query
 	 * @throws SQLException
-	 * @author carlos.cardona [18/07/2013]
 	 */
 	public void exeQueryBorrado(String mes, String anyo, String query) throws SQLException;
 
@@ -47,7 +45,6 @@ public interface ProjectBaseDAO {
 	 * 
 	 * @param id
 	 * @return
-	 * @author carlos.cardona [3/01/2014]
 	 */
 	public Equipo equipo(String id, String nombre);
 
@@ -81,7 +78,6 @@ public interface ProjectBaseDAO {
 	 * @param query
 	 * @param parametros
 	 * @param objeto
-	 * @author carlos.cardona [4/01/2014]
 	 */
 	public void crearActualizar(String query, final LinkedList<SqlParameter> parametros, Object[] objeto);
 
@@ -89,7 +85,6 @@ public interface ProjectBaseDAO {
 	 * 
 	 * @param query
 	 * @return
-	 * @author carlos.cardona [8/01/2014]
 	 */
 	public List<CargaSelects> cargaSelect(String query, final LinkedList<SqlParameter> parametros,
 			final LinkedHashMap<String, Object> valorParametros);
@@ -101,7 +96,6 @@ public interface ProjectBaseDAO {
 	 * @param parametros
 	 * @param valorParametros
 	 * @return
-	 * @author carlos.cardona [20/01/2014]
 	 */
 	public List<UltimoPYG> ultimoPYG(String query, final LinkedList<SqlParameter> parametros,
 			final LinkedHashMap<String, Object> valorParametros);
@@ -112,7 +106,6 @@ public interface ProjectBaseDAO {
 	 * @param parametros
 	 * @param valorParametros
 	 * @return
-	 * @author carlos.cardona [20/01/2014]
 	 */
 	public List<LlamadoPYG> llamadoPYG(String query, final LinkedList<SqlParameter> parametros,
 			final LinkedHashMap<String, Object> valorParametros);
@@ -124,7 +117,6 @@ public interface ProjectBaseDAO {
 	 * @param parametros
 	 * @param valorParametros
 	 * @return
-	 * @author carlos.cardona [21/01/2014]
 	 */
 	public List<BigDecimal> valor(String query, final LinkedList<SqlParameter> parametros,
 			final LinkedHashMap<String, Object> valorParametros);
@@ -136,7 +128,6 @@ public interface ProjectBaseDAO {
 	 * @param parametros
 	 * @param valorParametros
 	 * @return
-	 * @author carlos.cardona [21/01/2014]
 	 */
 	public List<Informacion> informacion(String query, final LinkedList<SqlParameter> parametros,
 			final LinkedHashMap<String, Object> valorParametros);
@@ -146,7 +137,6 @@ public interface ProjectBaseDAO {
 	 * @param year
 	 * @param mes
 	 * @return
-	 * @author carlos.cardona [22/01/2014]
 	 */
 	public BigDecimal getDivision(String year, String mes);
 
@@ -155,7 +145,6 @@ public interface ProjectBaseDAO {
 	 * @param year
 	 * @param mes
 	 * @return
-	 * @author carlos.cardona [22/01/2014]
 	 */
 	public BigDecimal getDivisionD(String year, String mes);
 
@@ -164,7 +153,6 @@ public interface ProjectBaseDAO {
 	 * @param mes
 	 * @param year
 	 * @return
-	 * @author carlos.cardona [23/01/2013]
 	 */
 	public BigDecimal getTotalHardware(String mes, String year);
 }

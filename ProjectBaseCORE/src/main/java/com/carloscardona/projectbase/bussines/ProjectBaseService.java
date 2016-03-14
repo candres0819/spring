@@ -2,6 +2,11 @@ package com.carloscardona.projectbase.bussines;
 
 import com.carloscardona.projectbase.dao.model.UsuarioSesion;
 
+/**
+ * 
+ * @author candr
+ *
+ */
 public interface ProjectBaseService {
 
 	/**
