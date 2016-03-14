@@ -19,6 +19,13 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
+			<groupId>com.carloscardona.projectbase</groupId>
+			<artifactId>ProjectBaseDAO</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>test-jar</type>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 			<version>4.1.7.RELEASE</version>
@@ -66,7 +73,6 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
 			<version>4.1.7.RELEASE</version>
-			<scope>test</scope>
 		</dependency>
 	</dependencies>
 </project>
