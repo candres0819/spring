@@ -41,15 +41,4 @@ public class ProjectBaseTest {
 			e.printStackTrace();
 		}
 	}
-
-	@Test
-	public void testMenu() {
-		String mav = "";
-		try {
-			mav = inicioController.onSubmit(request, model);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		Assert.assertEquals("menu", mav);
-	}
 }
