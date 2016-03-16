@@ -11,6 +11,9 @@
 	</appender>
 
 	<!-- Application Loggers -->
+	<logger name="com.carloscardona.projectbase">
+		<level value="info" />
+	</logger>
 	<logger name="com.springmvc.web">
 		<level value="info" />
 	</logger>
